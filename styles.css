@@ -1,0 +1,59 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: url('ruta/de/la/textura-de-flores.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgba(255, 215, 0, 0.9); /* Fondo amarillo con transparencia */
+    text-align: center;
+    padding: 1em;
+    animation: fadeIn 2s ease-in-out;
+}
+h1 {
+    color: #333;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.slide {
+    background: rgba(255, 249, 196, 0.9) url('ruta/de/las/flores.png') no-repeat center center;
+    background-size: cover;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 1em 0;
+    padding: 2em;
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+footer {
+    background-color: rgba(255, 215, 0, 0.9); /* Fondo amarillo con transparencia */
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
