@@ -1,6 +1,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background: url('ruta/de/la/textura-de-flores.jpg') no-repeat center center fixed;
+    background-attachment: fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -32,7 +33,24 @@ main {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    animation: slideIn 1s ease-in-out forwards;
+    transition: opacity 1s, transform 1s;
+}
+.slide.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+#nextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#nextBtn:hover {
+    background-color: #ffca28;
 }
 footer {
     background-color: rgba(255, 215, 0, 0.9); /* Fondo amarillo con transparencia */
@@ -40,20 +58,4 @@ footer {
     padding: 1em;
     margin-top: 2em;
     animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
