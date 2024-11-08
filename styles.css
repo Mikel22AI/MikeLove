@@ -35,6 +35,16 @@ main {
     transform: translateY(20px);
     transition: opacity 1s, transform 1s;
 }
+.slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajusta la altura máxima de la imagen */
+}
+.slide p {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: #333;
+}
 .slide.active {
     opacity: 1;
     transform: translateY(0);
