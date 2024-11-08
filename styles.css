@@ -1,8 +1,9 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: url('ruta/de/la/textura-de-flores.jpg') no-repeat center center fixed;
+    background: url('fotos/fondo.png') repeat; /* Repetición del fondo */
+    background-size: 100px 100px; /* Tamaño en miniatura */
     background-attachment: fixed;
-    background-size: cover;
+    opacity: 5.9; /* Semitransparencia */
     margin: 0;
     padding: 0;
 }
@@ -23,7 +24,7 @@ main {
     padding-bottom: 60px; /* Espacio para el botón flotante */
 }
 .slide {
-    background: rgba(255, 249, 196, 0.9) url('ruta/de/las/flores.png') no-repeat center center;
+    background: rgba(255, 249, 196, 0.9) no-repeat center center;
     background-size: cover;
     border: 1px solid #ddd;
     border-radius: 10px;
